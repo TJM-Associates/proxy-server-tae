@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const host = 'localhost:3003';
+const host = '54.215.234.24:3003';
 app.locals.newrelic = newrelic;
 
 app.use(bodyParser.json());
