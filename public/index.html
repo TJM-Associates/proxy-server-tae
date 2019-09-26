@@ -11,9 +11,11 @@
     </style>
 </head>
 <body>
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+    <script type='text/javascript' src="lib/react-dom-server.js"></script>
+    <script type='text/javascript' src="lib/react-dom.js"></script>
+    <!-- <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>-->
+    <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script> 
     <!-- <div id="overview" style="z-index:99; display:flex; padding-left:8%; padding-top:15px; padding-bottom:15px; width:100%; position:fixed; background-color: white;">
         <div style=""><a href="#overview">Overview</a></div>
         <div style="margin-left:10px"><a href="#gallery">Photos</a></div>
@@ -29,22 +31,21 @@
         <div id="reservation" style="margin-left:700px; position:fixed;"></div>
     </div>
     <script src="http://54.215.234.24:3003/restaurants/:rid/bundle.js"></script>
-    <!-- <script src="http://ec2-18-221-38-145.us-east-2.compute.amazonaws.com:3003/restaurants/:rid/bundle.js"></script>
-    <script src="https://lmwy-labs-ot-images.s3-us-west-1.amazonaws.com/Documents/main.js"></script>
-    <script src="http://ec2-18-222-142-160.us-east-2.compute.amazonaws.com:3001/restaurants/r30/bundle.js"></script> -->
+    <script src="http://52.8.6.53:3001/restaurants/:rid/bundle.js"></script>
+    <script src="http://54.193.42.82:3002/restaurants/:rid/main.js"></script>
     <script>
         ReactDOM.render(
             React.createElement(Reservation), 
             document.getElementById("reservation")
         );
-        // ReactDOM.render(
-        //     React.createElement(Gallery), 
-        //     document.getElementById("gallery")
-        // );
-        // ReactDOM.render(
-        //     React.createElement(Review), 
-        //     document.getElementById("review")
-        // );
+        ReactDOM.render(
+            React.createElement(Gallery), 
+            document.getElementById("gallery")
+        );
+        ReactDOM.render(
+            React.createElement(Review), 
+            document.getElementById("review")
+        );
     </script>
 </body>
 </html>
